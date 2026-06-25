@@ -17,7 +17,7 @@ def DER(t, S, paran):
   dSdt=-k(paran)*S
   return dSdt
 
-def model(t, [paran.SO], paran, T=35):
+def model(t, paran.S0, paran, T=35):
   cond=[paran.S0]
   T= paran.T
   t_eval=np.arange(0, t, 1000)
