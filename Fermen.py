@@ -19,7 +19,7 @@ def DER(t, S, paran):
   dSdt=-k(paran)*S
   return dSdt
 
-def model(paran):
+def model(paran, T=35):
   cond=[paran.S0]
   tempo=[[paran.ti], [paran.tf]]
   t_eval=np.arange(paran.ti, paran.tf, 100)
