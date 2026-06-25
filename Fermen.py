@@ -21,6 +21,7 @@ def DER(t, S, paran):
 
 def model(t, [paran.SO], parans=paran, T=35):
   cond=[paran.S0]
+  T= paran.T
   t=[[paran.ti], [paran.tf]]
   t_eval=np.arange(paran.ti, paran.tf, 100)
   sol=solve_ivp(DER, t, cond, t_eval=t_eval, args=(paran,))
