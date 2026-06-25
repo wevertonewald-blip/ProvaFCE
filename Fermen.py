@@ -19,9 +19,9 @@ def DER(t, S, paran):
   dSdt=-k(paran)*S
   return dSdt
 
-def model(paran, T=35):
+def model(t, [paran.SO], parans=paran, T=35):
   cond=[paran.S0]
-  tempo=[[paran.ti], [paran.tf]]
+  t=[[paran.ti], [paran.tf]]
   t_eval=np.arange(paran.ti, paran.tf, 100)
   sol=solve_ivp(DER, tempo, cond, t_eval=t_eval, args=(paran,))
   return sol.t, sol.y[0]
