@@ -15,8 +15,8 @@ class paran:
   Vm: float = 5
   Km: float = 20
   Ea: float = 30000
-  R: float = 8,314
-  Tr: float = 298,15
+  R: float = 8.314
+  Tr: float = 298.15
 
 def Vmax(T, paran):
   Vmaximo=paran.Vm*np.exp(-(paran.Ea/paran.R)*((1/T)-(1/paran.Tr)))
